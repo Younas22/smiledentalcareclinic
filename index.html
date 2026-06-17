@@ -584,71 +584,65 @@ tailwind.config = {
 </section>
 
 <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
-<footer id="contact" class="text-white bg-blue-600 py-16 px-4">
-    <div class="max-w-6xl mx-auto">
+<footer id="contact" class="relative text-white overflow-hidden bg-gradient-to-b from-blue-600 via-blue-700 to-blue-900 py-20 px-4">
 
-        <!-- Main 3-column flow -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10">
+    <!-- Soft glow behind brand -->
+    <div class="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 w-[30rem] h-[30rem] bg-blue-400/30 rounded-full blur-[110px]"></div>
 
-            <!-- Left: Brand -->
-            <div class="text-center md:text-left">
-                <h3 class="text-xl font-extrabold tracking-tight">Smile Dental Care Clinic</h3>
-                <p class="text-white/80 text-sm font-semibold mt-1.5">Healthy Smile, Confident Life</p>
-                <p class="text-white/80 text-sm mt-4 leading-relaxed max-w-xs mx-auto md:mx-0">
-                    Affordable, modern dental treatment in Kacha Khuh and surrounding areas.
-                </p>
-            </div>
+    <div class="relative max-w-4xl mx-auto text-center">
 
-            <!-- Center: Contact -->
-            <div class="text-center">
-                <h4 class="text-base font-bold mb-4">Contact Us</h4>
-                <div class="space-y-3 text-sm">
-                    <a href="https://wa.me/923426082019?text=Hi%2C%20I%20want%20to%20book%20a%20dental%20appointment" target="_blank" rel="noopener"
-                       class="flex items-center justify-center gap-2 text-white/90 hover:text-white transition">
-                        <i class="fas fa-mobile-screen text-white/60"></i> 0342-6082019
-                    </a>
-                    <a href="tel:+923024677511" class="flex items-center justify-center gap-2 text-white/90 hover:text-white transition">
-                        <i class="fas fa-phone text-white/60"></i> 0302-4677511
-                    </a>
-                    <p class="flex items-start justify-center gap-2 text-white/80 max-w-xs mx-auto pt-1">
-                        <i class="fas fa-location-dot text-white/60 mt-0.5"></i>
-                        <span>Kacha Khuh near Dr. Zawar Hussain Shah Clinic, Phattak Chowk</span>
-                    </p>
-                </div>
-            </div>
+        <!-- Top: Brand -->
+        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight">Smile Dental Care Clinic</h2>
+        <p class="text-blue-100 text-lg md:text-xl font-medium mt-3">Healthy Smile. Confident Life.</p>
+        <p class="text-white/70 text-sm md:text-base mt-2 max-w-md mx-auto">
+            Professional dental care for families in Kacha Khuh.
+        </p>
 
-            <!-- Right: CTA -->
-            <div class="text-center md:text-right">
-                <h4 class="text-base font-bold">Need a Dental Appointment?</h4>
-                <p class="text-white/80 text-sm mt-1.5 mb-5">Get a same-day appointment in minutes.</p>
-                <div class="flex flex-wrap items-center justify-center md:justify-end gap-3">
-                    <a href="https://wa.me/923426082019?text=Hi%2C%20I%20want%20to%20book%20a%20dental%20appointment" target="_blank" rel="noopener"
-                       class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold text-sm px-5 py-2.5 rounded-full transition hover:scale-[1.03]">
-                        <i class="fab fa-whatsapp"></i> Book on WhatsApp
-                    </a>
-                    <a href="tel:+923024677511"
-                       class="inline-flex items-center gap-2 border border-white/50 hover:bg-white hover:text-blue-600 text-white font-semibold text-sm px-5 py-2.5 rounded-full transition hover:scale-[1.03]">
-                        Call Now
-                    </a>
-                </div>
+        <!-- Middle: Info row -->
+        <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-5 sm:gap-10 mt-14 text-sm font-medium">
+            <a href="tel:+923024677511" class="flex items-center gap-2.5 text-white/85 hover:text-white transition">
+                <i class="fas fa-phone text-blue-200"></i> 0302-4677511
+            </a>
+            <a href="https://wa.me/923426082019?text=Hi%2C%20I%20want%20to%20book%20a%20dental%20appointment" target="_blank" rel="noopener" class="flex items-center gap-2.5 text-white/85 hover:text-white transition">
+                <i class="fab fa-whatsapp text-blue-200"></i> 0342-6082019
+            </a>
+            <span class="flex items-center gap-2.5 text-white/85 text-center">
+                <i class="fas fa-location-dot text-blue-200"></i> Kacha Khuh near Dr. Zawar Hussain Shah Clinic, Phattak Chowk
+            </span>
+            <span class="flex items-center gap-2.5 text-white/85">
+                <i class="fas fa-shield-halved text-blue-200"></i> PHC Registered (R-67257)
+            </span>
+        </div>
+
+        <!-- CTA strip -->
+        <div class="mt-16 bg-white/[0.06] backdrop-blur-sm rounded-3xl px-6 py-10 md:px-12">
+            <h3 class="text-xl md:text-2xl font-bold">Ready to improve your smile?</h3>
+            <p class="text-blue-100 text-sm md:text-base mt-2 mb-7">Book your appointment today.</p>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <a href="https://wa.me/923426082019?text=Hi%2C%20I%20want%20to%20book%20a%20dental%20appointment" target="_blank" rel="noopener"
+                   class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-full transition-all hover:scale-[1.04]">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Appointment
+                </a>
+                <a href="tel:+923024677511"
+                   class="inline-flex items-center gap-2 border border-white/40 hover:bg-white hover:text-blue-700 text-white font-semibold px-6 py-3 rounded-full transition-all hover:scale-[1.04]">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
             </div>
         </div>
 
-        <!-- Trust Row -->
-        <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-white/80 text-xs sm:text-sm font-medium mt-14">
-            <span class="flex items-center gap-1.5"><i class="fas fa-star text-yellow-400 text-[11px]"></i> 500+ Happy Patients</span>
-            <span class="text-white/25">•</span>
-            <span class="flex items-center gap-1.5"><i class="fas fa-star text-yellow-400 text-[11px]"></i> 5-Star Ratings</span>
-            <span class="text-white/25">•</span>
-            <span class="flex items-center gap-1.5"><i class="fas fa-star text-yellow-400 text-[11px]"></i> Positive Patient Feedback</span>
-            <span class="text-white/25">•</span>
-            <span class="flex items-center gap-1.5"><i class="fas fa-circle-check text-white/80 text-[11px]"></i> PHC Registered (R-67257)</span>
+        <!-- Trust indicators -->
+        <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-white/70 text-xs sm:text-sm mt-12">
+            <span class="flex items-center gap-1.5"><i class="fas fa-star text-yellow-400 text-[10px]"></i> 500+ Happy Patients</span>
+            <span class="text-white/20">|</span>
+            <span class="flex items-center gap-1.5"><i class="fas fa-star text-yellow-400 text-[10px]"></i> 5-Star Reviews</span>
+            <span class="text-white/20">|</span>
+            <span class="flex items-center gap-1.5"><i class="fas fa-circle-check text-blue-200 text-[10px]"></i> PHC Registered</span>
         </div>
 
-        <!-- Bottom Bar -->
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-white/70 text-xs mt-10 pt-6 border-t border-white/15 text-center sm:text-left">
-            <p>&copy; <span id="year"></span> Smile Dental Care Clinic. All rights reserved.</p>
-            <p>Punjab Healthcare Commission Registered</p>
+        <!-- Bottom bar -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-white/60 text-xs mt-12 pt-6 border-t border-white/10">
+            <p>&copy; <span id="year"></span> Smile Dental Care Clinic</p>
+            <p>Designed for Patient Care & Trust</p>
         </div>
     </div>
 </footer>
