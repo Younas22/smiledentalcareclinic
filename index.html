@@ -150,7 +150,7 @@ tailwind.config = {
         </nav>
 
         <div class="flex items-center gap-2">
-            <a href="tel:+923426082019" class="hidden md:inline-flex items-center gap-2 border-2 border-brand text-brand font-bold px-4 py-2 rounded-full text-sm hover:bg-[#09174b] hover:text-white transition">
+            <a href="tel:+923024677511" class="hidden md:inline-flex items-center gap-2 border-2 border-brand text-brand font-bold px-4 py-2 rounded-full text-sm hover:bg-[#09174b] hover:text-white transition">
                 <i class="fas fa-phone"></i> Call Now
             </a>
             <a href="https://wa.me/923426082019?text=Hi%2C%20I%20want%20to%20book%20a%20dental%20appointment" target="_blank" rel="noopener"
@@ -204,17 +204,17 @@ tailwind.config = {
                     <span class="flex items-center gap-2 text-sm sm:text-base"><i class="fab fa-whatsapp text-lg"></i> WhatsApp Appointment</span>
                     <span class="text-xl sm:text-2xl font-extrabold tracking-wide">0342-6082019</span>
                 </a>
-                <a href="tel:+923426082019"
+                <a href="tel:+923024677511"
                    class="flex flex-col items-center justify-center gap-1 bg-brand hover:bg-brand-light text-black font-bold px-7 py-3.5 rounded-xl shadow-xl shadow-blue-900/20 hover:scale-105 transition-all w-full sm:w-auto">
                     <span class="flex items-center gap-2 text-sm sm:text-base"><i class="fas fa-phone text-base"></i> Call Now</span>
-                    <span class="text-xl sm:text-2xl font-extrabold tracking-wide">0342-6082019</span>
+                    <span class="text-xl sm:text-2xl font-extrabold tracking-wide">0302-4677511</span>
                 </a>
             </div>
 
             <!-- Urgency Line -->
             <p class="text-sm font-semibold text-gray-500 flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-7">
                 <span class="inline-flex items-center gap-1.5 bg-green-50 text-green-700 px-3 py-1.5 rounded-full"><i class="fas fa-circle-check"></i> Same Day Treatment Available</span>
-                <span class="inline-flex items-center gap-1.5 bg-red-50 text-red-600 px-3 py-1.5 rounded-full"><i class="fas fa-truck-medical"></i> Emergency Dental Care 24/7</span>
+                <span class="inline-flex items-center gap-1.5 bg-red-50 text-red-600 px-3 py-1.5 rounded-full"><i class="fas fa-clock"></i> Open Daily: 9AM - 6PM</span>
             </p>
 
             <!-- Social Proof -->
@@ -235,19 +235,25 @@ tailwind.config = {
         </div>
 
         <div class="flex-shrink-0 w-full max-w-sm lg:max-w-md">
-            <div id="heroSlider" class="hero-image-card relative rounded-3xl shadow-2xl overflow-hidden border border-blue-100 aspect-[3/4]">
-                <img src="icons/clinic-imgs/beforeafter1.png" alt="Smile Dental Care Clinic - Before & After Treatment 1" class="hero-slide absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-700">
-                <img src="icons/clinic-imgs/beforeafter2.png" alt="Smile Dental Care Clinic - Before & After Treatment 2" class="hero-slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700">
-                <img src="icons/clinic-imgs/beforeafter3.png" alt="Smile Dental Care Clinic - Before & After Treatment 3" class="hero-slide absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700">
+            <div class="hero-image-card relative rounded-3xl shadow-2xl overflow-hidden border border-blue-100 aspect-[3/4]">
+                <img src="icons/clinic-imgs/hero.png" alt="Smile Dental Care Clinic - Modern Treatment Room" class="absolute inset-0 w-full h-full object-cover">
                 <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#09174b]/90 via-[#09174b]/30 to-transparent p-4 pt-10">
                     <p class="text-white font-bold text-sm flex items-center gap-2"><i class="fas fa-location-dot"></i> Kacha Khuh, Phattak Chowk</p>
                 </div>
-                <div class="absolute top-3 right-3 flex gap-1.5 z-10">
-                    <span class="hero-dot w-2 h-2 rounded-full bg-white/90"></span>
-                    <span class="hero-dot w-2 h-2 rounded-full bg-white/40"></span>
-                    <span class="hero-dot w-2 h-2 rounded-full bg-white/40"></span>
-                </div>
             </div>
+
+            <!-- Service Highlights -->
+            <!-- <div class="flex justify-center gap-4 mt-4">
+                <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                    <img src="icons/services/Root-Canal-Treatment.png" alt="Root Canal Treatment Results" class="w-full h-full object-cover">
+                </div>
+                <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                    <img src="icons/services/Teeth-and-Dental-Implants.png" alt="Dental Implants Results" class="w-full h-full object-cover">
+                </div>
+                <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                    <img src="icons/services/Wisdom-Tooth-Removal.png" alt="Wisdom Tooth Removal Results" class="w-full h-full object-cover">
+                </div>
+            </div> -->
         </div>
     </div>
 </section>
@@ -436,6 +442,32 @@ tailwind.config = {
                class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg shadow-green-500/30 transition">
                 <i class="fab fa-whatsapp"></i> Ask About a Service on WhatsApp
             </a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════ BEFORE & AFTER ═══════════════════════════ -->
+<section id="before-after" class="bg-gray-50 py-14 md:py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-10">
+            <p class="text-blue-600 font-semibold text-sm uppercase tracking-widest mb-2">Real Results</p>
+            <h2 class="text-2xl md:text-4xl font-extrabold text-brand">Before & After</h2>
+            <div class="section-title-underline mx-auto mt-3 mb-4"></div>
+            <p class="text-gray-500 max-w-2xl mx-auto">See the smile transformations from our actual patients</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="rounded-2xl shadow-md overflow-hidden border border-gray-100">
+                <img src="icons/services/beforeafter1.png" alt="Smile Makeover - Before & After" class="w-full h-64 object-cover">
+            </div>
+            <div class="rounded-2xl shadow-md overflow-hidden border border-gray-100">
+                <img src="icons/services/beforeafter2.png" alt="Braces Treatment - Before & After" class="w-full h-64 object-cover">
+            </div>
+            <div class="rounded-2xl shadow-md overflow-hidden border border-gray-100">
+                <img src="icons/services/beforeafter3.png" alt="Gum Health Treatment - Before & After" class="w-full h-64 object-cover">
+            </div>
+            
+          
         </div>
     </div>
 </section>
@@ -677,25 +709,6 @@ tailwind.config = {
 
 <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    (function () {
-        const slides = document.querySelectorAll('#heroSlider .hero-slide');
-        const dots = document.querySelectorAll('#heroSlider .hero-dot');
-        let current = 0;
-        if (slides.length > 1) {
-            setInterval(() => {
-                slides[current].classList.remove('opacity-100');
-                slides[current].classList.add('opacity-0');
-                dots[current].classList.replace('bg-white/90', 'bg-white/40');
-
-                current = (current + 1) % slides.length;
-
-                slides[current].classList.remove('opacity-0');
-                slides[current].classList.add('opacity-100');
-                dots[current].classList.replace('bg-white/40', 'bg-white/90');
-            }, 3000);
-        }
-    })();
 </script>
 </body>
 </html>
