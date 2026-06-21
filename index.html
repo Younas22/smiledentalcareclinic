@@ -315,7 +315,7 @@ tailwind.config = {
         </div>
 
         <!-- Full feature images -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div class="relative rounded-2xl overflow-hidden shadow-lg group">
                 <img src="icons/clinic-imgs/hero.png" alt="Modern Dental Treatment Chair" class="w-full h-64 md:h-72 object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex items-end p-4">
@@ -326,6 +326,12 @@ tailwind.config = {
                 <img src="icons/clinic-imgs/chair-closeup.jpeg" alt="Dental Equipment Closeup" class="w-full h-64 md:h-72 object-cover group-hover:scale-105 transition-transform duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex items-end p-4">
                     <p class="text-white font-bold text-sm md:text-base flex items-center gap-2"><i class="fas fa-tooth"></i> Advanced Dental Equipment</p>
+                </div>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden shadow-lg group">
+                <img src="icons/clinic-imgs/xray.png" alt="Digital Dental X-Ray Facility" class="w-full h-64 md:h-72 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex items-end p-4">
+                    <p class="text-white font-bold text-sm md:text-base flex items-center gap-2"><i class="fas fa-x-ray"></i> Digital Dental X-Ray</p>
                 </div>
             </div>
         </div>
@@ -382,6 +388,11 @@ tailwind.config = {
 
         <div class="flex flex-wrap justify-center gap-4 mt-10">
             <!-- Service cards -->
+            <div class="service-card relative bg-blue-50 rounded-2xl p-5 border-2 border-blue-200 w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.667rem)] lg:w-[calc(25%-0.75rem)]">
+                <span class="absolute -top-2 -right-2 bg-green-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">New</span>
+                <i class="fas fa-x-ray text-2xl text-brand mb-3"></i>
+                <h3 class="font-bold text-sm text-brand mb-1">Digital Dental X-Ray</h3>
+            </div>
             <div class="service-card bg-gray-50 rounded-2xl p-5 border border-gray-100 w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.667rem)] lg:w-[calc(25%-0.75rem)]">
                 <i class="fas fa-tooth text-2xl text-brand mb-3"></i>
                 <h3 class="font-bold text-sm text-brand mb-1">Root Canal Treatment</h3>
@@ -502,8 +513,9 @@ tailwind.config = {
                 </div>
                 <div class="p-5 text-center border-t-4 border-[#09174b]">
                     <h3 class="font-bold text-lg text-brand">Dr. Abdullah</h3>
-                    <p class="text-blue-600 text-sm font-bold">Senior Dental Surgeon - BDS, RDS (PMDC)</p>
-                    <p class="text-gray-500 text-xs font-semibold mt-1">International Dentistry Specialist, Multan</p>
+                    <p class="text-blue-600 text-sm font-bold">BDS, RDS (PMDC)</p>
+                    <p class="text-gray-500 text-xs font-semibold mt-1">Ex House Surgeon and Oral Physician</p>
+                    <p class="text-gray-500 text-xs font-semibold">Nishtar Institute of Dentistry, Multan</p>
                 </div>
             </div>
         </div>
