@@ -614,23 +614,8 @@ tailwind.config = {
             <div class="section-title-underline mx-auto mt-3"></div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="testimonial-card bg-white rounded-2xl shadow-md p-6">
-                <div class="text-yellow-400 mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="text-gray-600 text-sm leading-relaxed mb-4">"Best dental clinic in Kacha Khuh, very professional staff."</p>
-                <p class="font-bold text-brand text-sm">- Ahmad Raza</p>
-            </div>
-            <div class="testimonial-card bg-white rounded-2xl shadow-md p-6">
-                <div class="text-yellow-400 mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="text-gray-600 text-sm leading-relaxed mb-4">"Pain-free root canal, highly recommended."</p>
-                <p class="font-bold text-brand text-sm">- Sana Malik</p>
-            </div>
-            <div class="testimonial-card bg-white rounded-2xl shadow-md p-6">
-                <div class="text-yellow-400 mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="text-gray-600 text-sm leading-relaxed mb-4">"Affordable and clean environment."</p>
-                <p class="font-bold text-brand text-sm">- Bilal Hussain</p>
-            </div>
-        </div>
+        <!-- Elfsight Google Reviews | Smile Dental Care Clinic -->
+        <div class="elfsight-app-978d2078-fb3f-42c1-a525-63a6a1fc79e8" data-elfsight-app-lazy></div>
     </div>
 </section>
 
@@ -746,8 +731,21 @@ tailwind.config = {
     <i class="fab fa-whatsapp"></i>
 </a>
 
+<!-- Elfsight Google Reviews -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+
 <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    (function () {
+        var widget = document.querySelector('.elfsight-app-978d2078-fb3f-42c1-a525-63a6a1fc79e8');
+        if (!widget) return;
+        var observer = new MutationObserver(function () {
+            var badge = widget.querySelector('a[href*="elfsight.com/google-reviews-widget"]');
+            if (badge) badge.remove();
+        });
+        observer.observe(widget, { childList: true, subtree: true });
+    })();
 </script>
 </body>
 </html>
