@@ -139,6 +139,8 @@ tailwind.config = {
     .section-title-underline {
         height: 4px; width: 56px; background: #09174b; border-radius: 2px;
     }
+
+    .eapps-widget-toolbar { display: none !important; }
 </style>
 </head>
 <body class="bg-white text-brand">
@@ -736,16 +738,6 @@ tailwind.config = {
 
 <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    (function () {
-        var widget = document.querySelector('.elfsight-app-978d2078-fb3f-42c1-a525-63a6a1fc79e8');
-        if (!widget) return;
-        var observer = new MutationObserver(function () {
-            var badge = widget.querySelector('a[href*="elfsight.com/google-reviews-widget"]');
-            if (badge) badge.remove();
-        });
-        observer.observe(widget, { childList: true, subtree: true });
-    })();
 </script>
 </body>
 </html>
