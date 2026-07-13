@@ -630,22 +630,36 @@ tailwind.config = {
             <div class="section-title-underline mx-auto mt-3"></div>
         </div>
 
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            <div class="rounded-2xl overflow-hidden shadow-lg aspect-[9/16] bg-black">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/bGeF2PpOIwI" title="Happy Client Review" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="rounded-2xl overflow-hidden shadow-lg aspect-[9/16] bg-black">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/bGeF2PpOIwI" title="Happy Client Review" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="rounded-2xl overflow-hidden shadow-lg aspect-[9/16] bg-black">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/bGeF2PpOIwI" title="Happy Client Review" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="rounded-2xl overflow-hidden shadow-lg aspect-[9/16] bg-black">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/bGeF2PpOIwI" title="Happy Client Review" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+        <div id="video-reviews-container" class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
+            <p class="col-span-full text-center text-gray-400 text-sm">Loading reviews...</p>
         </div>
     </div>
 </section>
+
+<script>
+(function () {
+    const container = document.getElementById('video-reviews-container');
+
+    fetch('reviews.json?t=' + Date.now())
+        .then(res => res.json())
+        .then(reviews => {
+            if (!Array.isArray(reviews) || reviews.length === 0) {
+                container.innerHTML = '<p class="col-span-full text-center text-gray-400 text-sm">No reviews yet.</p>';
+                return;
+            }
+
+            const latest = reviews.slice(-3);
+            container.innerHTML = latest.map(review => `
+                <div class="rounded-2xl overflow-hidden shadow-lg aspect-[9/16] bg-black">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/${encodeURIComponent(review.youtubeId)}" title="Happy Client Review" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            `).join('');
+        })
+        .catch(() => {
+            container.innerHTML = '<p class="col-span-full text-center text-gray-400 text-sm">Could not load reviews.</p>';
+        });
+})();
+</script>
 
 <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
 <footer id="contact" class="relative text-white overflow-hidden bg-gradient-to-b from-blue-600 via-blue-700 to-blue-900 py-20 px-4">
